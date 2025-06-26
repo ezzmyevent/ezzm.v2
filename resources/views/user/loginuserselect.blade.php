@@ -233,7 +233,7 @@
 
                 if (response.type === 'Success') {
                     toastr.success(response.message); // Success message
-					var userId = '{{ Session::get('user') }}';
+					var userId = '{{ Session::get("user") }}';
 					window.location.href="{{route('loginSelectUser')}}/"+userId;
                     window.location.href = "{{ route('attendeesUser') }}/"+userId;
                 } else if (response.error) {

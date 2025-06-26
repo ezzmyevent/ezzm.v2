@@ -71,8 +71,11 @@
 					<span class="svg_icn me-2 me-lg-3">
 						<img src="{{asset('public/images/date_icon.svg')}}"alt="">
 					</span>
-					<b class="flex-grow-1"><span class="text-muted d-block lh-1">DATE</span>
-					{{ $master_setting['settings']->event_date }} </b>
+					<b class="flex-grow-1">
+    <span class="text-muted d-block lh-1">DATE</span>
+    {{ isset($master_setting['settings']) ? e($master_setting['settings']->event_date) : 'Date not set' }}
+</b>
+
 				</div>
 				
 				<div class="d-flex align-items-start mb-3">
