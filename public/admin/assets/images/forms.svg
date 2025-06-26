@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" viewBox="0 0 34 34">
+  <g id="forms" transform="translate(-62 -239)">
+    <rect id="Rectangle_62" data-name="Rectangle 62" width="34" height="34" transform="translate(62 239)" fill="#fff" opacity="0"/>
+    <g id="forms-2" data-name="forms">
+      <rect id="Rectangle_62-2" data-name="Rectangle 62" width="34" height="34" transform="translate(62 239)" fill="#fff" opacity="0"/>
+      <g id="Group_29" data-name="Group 29" transform="translate(-1 -2)">
+        <g id="Rectangle_6" data-name="Rectangle 6" transform="translate(66 243)" fill="none" stroke="#333" stroke-width="2">
+          <rect width="28" height="30" stroke="none"/>
+          <rect x="1" y="1" width="26" height="28" fill="none"/>
+        </g>
+        <rect id="Rectangle_7" data-name="Rectangle 7" width="15" height="3" transform="translate(72 250)" fill="#333"/>
+        <rect id="Rectangle_8" data-name="Rectangle 8" width="15" height="3" transform="translate(72 257)" fill="#333"/>
+        <rect id="Rectangle_9" data-name="Rectangle 9" width="15" height="3" transform="translate(72 264)" fill="#333"/>
+      </g>
+    </g>
+  </g>
+</svg>

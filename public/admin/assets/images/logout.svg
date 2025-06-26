@@ -1,0 +1,7 @@
+<svg id="logout" xmlns="http://www.w3.org/2000/svg" width="49" height="48" viewBox="0 0 49 48">
+  <rect id="Rectangle_68" data-name="Rectangle 68" width="49" height="48" rx="24" fill="#f1f1f1"/>
+  <g id="logout_icon" transform="translate(13.545 12.329)">
+    <path id="Path_238" data-name="Path 238" d="M192.461,130.072a11.813,11.813,0,0,1-10.48-6.338l2.027-1.069a9.545,9.545,0,1,0,0-8.861l-2.027-1.065a11.836,11.836,0,1,1,10.48,17.333Z" transform="translate(-181.389 -106.401)" fill="#de3c34"/>
+    <path id="Path_239" data-name="Path 239" d="M282.812,199.33h12.126l-3.054-3.054,1.619-1.619,5.009,5.009a1.146,1.146,0,0,1,0,1.619l-5.009,5.009-1.619-1.619,3.054-3.054H282.812Z" transform="translate(-282.812 -188.64)" fill="#de3c34"/>
+  </g>
+</svg>

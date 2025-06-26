@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" viewBox="0 0 34 34">
+  <g id="event_details" transform="translate(-133.992 -60.193)">
+    <rect id="Rectangle_61" data-name="Rectangle 61" width="34" height="34" transform="translate(133.992 60.193)" fill="#fff" opacity="0"/>
+    <g id="event_details_fill">
+      <rect id="Rectangle_61-2" data-name="Rectangle 61" width="34" height="34" transform="translate(133.992 60.193)" fill="#fff" opacity="0"/>
+      <path id="event_note_FILL1_wght400_GRAD0_opsz48" d="M12.4,22.4V20h16v2.4Zm0,7.2V27.2H23.56v2.4ZM8.4,36a2.3,2.3,0,0,1-1.68-.72A2.3,2.3,0,0,1,6,33.6V8.8a2.3,2.3,0,0,1,.72-1.68A2.3,2.3,0,0,1,8.4,6.4H11V4h2.6V6.4H27.2V4h2.6V6.4h2.6a2.3,2.3,0,0,1,1.68.72A2.3,2.3,0,0,1,34.8,8.8V33.6A2.461,2.461,0,0,1,32.4,36Zm0-2.4h24V16.4H8.4V33.6Z" transform="translate(130.992 57.193)" fill="#5046ba"/>
+    </g>
+  </g>
+</svg>

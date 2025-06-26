@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="23.359" height="23.359" viewBox="0 0 23.359 23.359">
+  <g id="radio_group" transform="translate(-122.5 -52.5)">
+    <path id="Path_188" data-name="Path 188" d="M144.96,52.5H123.4a.9.9,0,0,0-.9.9V74.96a.9.9,0,0,0,.9.9H144.96a.9.9,0,0,0,.9-.9V53.4A.9.9,0,0,0,144.96,52.5Zm-.9,21.562H124.3V54.3h19.765Z" fill="#333"/>
+    <path id="Path_189" data-name="Path 189" d="M315.9,176.8h8.086a.9.9,0,1,0,0-1.8H315.9a.9.9,0,1,0,0,1.8Z" transform="translate(-182.617 -116.211)" fill="#333"/>
+    <path id="Path_190" data-name="Path 190" d="M315.9,351.8h8.086a.9.9,0,1,0,0-1.8H315.9a.9.9,0,1,0,0,1.8Z" transform="translate(-182.617 -282.227)" fill="#333"/>
+    <path id="Path_191" data-name="Path 191" d="M195.2,145.391a2.7,2.7,0,1,0-2.7-2.7A2.7,2.7,0,0,0,195.2,145.391Zm0-3.594a.9.9,0,1,1-.9.9A.9.9,0,0,1,195.2,141.8Z" transform="translate(-66.406 -83.008)" fill="#333"/>
+    <path id="Path_192" data-name="Path 192" d="M195.2,320.391a2.7,2.7,0,1,0-2.7-2.7A2.7,2.7,0,0,0,195.2,320.391Z" transform="translate(-66.406 -249.024)" fill="#333"/>
+  </g>
+</svg>

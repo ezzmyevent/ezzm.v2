@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@font-face {
+  font-family: "SegoeUI";
+  src: url(../fonts/SegoeUI.woff) format("woff"),
+       url(../fonts/SegoeUI.ttf) format("truetype"),
+       url(../fonts/SegoeUI.otf) format("OpenType");
+}
+@font-face {
+  font-family: "AdobeClean-Bold";
+  src: url(../fonts/AdobeClean-Bold.woff) format("woff"),
+       url(../fonts/AdobeClean-Bold.ttf) format("truetype");
+}
+@font-face {
+  font-family: "AdobeClean-Regular";
+  src: url(../fonts/AdobeClean-Regular.woff) format("woff"),
+       url(../fonts/AdobeClean-Regular.ttf) format("truetype");
+}
+
+* {
+	box-sizing: border-box;
+}
+body {
+  direction: ltr;
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  color: #1B1D32;
+  padding-left: 80px;
+}
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  color: #1B1D32;
+}
+a {
+	transition: .25s all ease-in-out;
+	text-shadow: none;
+	cursor: pointer;
+}
+a:hover {
+  color: #3175af;
+}
+*::-webkit-scrollbar-track {-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); border-radius: 8px; background-color: #F5F5F5; }
+*::-webkit-scrollbar {width: 5px; background-color: #F5F5F5; }
+*::-webkit-scrollbar-thumb {border-radius: 8px; -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3); background-color: #5046BA; }
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #5046BA #ccc !important;
+}
+button {
+	transition: .25s all ease-in-out;
+}
+.btn:focus, .btn:hover, .btn:active,
+button:focus, button:hover, button:active {
+	outline: none!important;
+	box-shadow: none!important;
+}
+.form-control:focus {
+	box-shadow: none!important;
+}
+.form-control:focus-visible {
+  outline: none;
+  text-shadow: none;
+}
+
+
+.tooltip .arrow:before {
+  border-top-color: #fff !important;
+}
+
+.tooltip .tooltip-inner {
+  background-color: #fff;
+  box-shadow: 0 4px 10px 0 rgba(0,0,0,0.2);
+  color: #000;
+}
+
+.alert {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  font-size: 14px;
+}
+
+.display-none,
+.display-hide {
+  display: none;
+}
+.hidden {
+  display: none !important;
+}
+
+
+.lds-hourglass {
+  width: 100% !important;
+  height: 100vh !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0 !important;
+  bottom: 0;
+  left: 0 !important;
+  right: 0;
+  z-index: 99999999;
+  background: #ffffff96;
+}
+.lds-hourglass {
+  top: 495px;
+  left: 64px;
+  width: 248px;
+  height: 140px;
+  opacity: 1;
+}

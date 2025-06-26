@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" viewBox="0 0 34 34">
+  <g id="dashboard_icon" transform="translate(-31 -244)">
+    <rect id="Rectangle_57" data-name="Rectangle 57" width="34" height="34" transform="translate(31 244)" fill="none" opacity="0"/>
+    <path id="dashboard" d="M21.167,16.5V6H34V16.5ZM6,21.167V6H18.833V21.167ZM21.167,34V18.833H34V34ZM6,34V23.5H18.833V34ZM8.333,18.833H16.5V8.333H8.333ZM23.5,31.667h8.167v-10.5H23.5Zm0-17.5h8.167V8.333H23.5ZM8.333,31.667H16.5V25.833H8.333ZM16.5,18.833ZM23.5,14.167ZM23.5,21.167ZM16.5,25.833Z" transform="translate(28 241)" fill="#333"/>
+  </g>
+</svg>

@@ -1,0 +1,6 @@
+<svg id="delete_icon" xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 36 36">
+  <circle id="Ellipse_8" data-name="Ellipse 8" cx="18" cy="18" r="18" fill="#d83b28"/>
+  <g id="delete_icon-2" data-name="delete_icon" transform="translate(-138.243 -10.438)">
+    <path id="Path_9474" data-name="Path 9474" d="M148.955,20.862h14.131a1.712,1.712,0,0,1,0,3.424H148.955a1.712,1.712,0,0,1,0-3.424Zm4.614-3.424h4.9a1.673,1.673,0,0,1,1.669,1.669v.637H151.9v-.637a1.674,1.674,0,0,1,1.669-1.669Zm10.054,7.914V36.807a3.376,3.376,0,0,1-3.366,3.366h-8.473a3.376,3.376,0,0,1-3.366-3.366V25.352a2.837,2.837,0,0,0,.537.052h14.132a2.856,2.856,0,0,0,.537-.052Z" fill="#fff" fill-rule="evenodd"/>
+  </g>
+</svg>

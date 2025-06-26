@@ -1,0 +1,31 @@
+.right{
+    text-align: right;
+}
+
+.custom-select{ padding: 0 !important; border: 0 !important;}
+
+.custom-select .select2-selection{ height: 35px; line-height: 15px;}
+.custom-select .select2-selection__rendered{line-height: 21px !important;}
+
+.custom-select span.select2 {
+    width: 100% !important;
+}
+
+.vertical-set svg,.vertical-set svg {
+    margin-top: calc(50% - 8px);
+}
+
+label#coupon_type-error {
+    position: absolute;
+    top: 100%;
+    margin: 5px 0px !important;
+}
+label#ticket_id-error {
+    position: absolute;
+    top: 100%;
+    margin: 5px 0px !important;
+}
+
+.form-group {
+    position: relative;
+}
