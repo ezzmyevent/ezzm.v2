@@ -259,7 +259,7 @@ updateOptions();
 
                 if (response.type === 'Success') {
                     toastr.success(response.message); // Success message
-					var userId = '{{ Session::get('user') }}';
+					var userId = '{{ Session::get("user") }}';
                     window.location.href = "{{ route('thanksActivity') }}";
                 } else if (response.error) {
                     $.each(response.error, function (key, value) {
