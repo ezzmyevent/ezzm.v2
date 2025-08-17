@@ -20,20 +20,26 @@ class AppServiceProvider extends ServiceProvider
 
     public function boot()
     {
-        $master_setting['currentURL'] = request()->segments();
-        // $settings = DB::table('events')->where('id', 1)->first();
-        
-   $settings = null;
-    if (Schema::hasTable('events')) {
-        try {
-            $settings = DB::table('events')->where('id', 1)->first();
-        } catch (\Exception $e) {
-            $settings = null; // Prevent crash if something else fails
+        // Avoid hitting database or request context while running in console
+        // (e.g., composer dump-autoload, artisan commands, package:discover)
+        if ($this->app->runningInConsole()) {
+            return;
         }
-    }
+
+        $master_setting['currentURL'] = request()->segments();
+
+        $settings = null;
+        try {
+            if (Schema::hasTable('events')) {
+                $settings = DB::table('events')->where('id', 1)->first();
+            }
+        } catch (\Throwable $e) {
+            // Swallow any DB errors during web boot to keep app responsive
+            $settings = null;
+        }
 
         $master_setting['settings'] = $settings;
-        
+
         View::share('master_setting', $master_setting);
     }
 

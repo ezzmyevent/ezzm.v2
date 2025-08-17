@@ -60,3 +60,10 @@ Route::post('/alloteduser', [OngroundController::class, 'alloteduser']);
 
 // zapping api
 Route::get('zapping/{location}/{code}',[ZappingApiController::class, 'zapping']);
+
+// Mobile App API urls
+Route::get('/app_login/{username?}', [AppApisController::class, 'login']);
+Route::get('/search_user/{search?}', [AppApisController::class, 'search_user']);
+Route::get('/save_onsite_user/{data?}', [AppApisController::class, 'save_onsite_user']);
+Route::get('/entryzapping/{unique_code?}/{location?}', [AppApisController::class, 'entryzapping']);
+Route::get('/update/{id}', [AppApisController::class, 'update']);

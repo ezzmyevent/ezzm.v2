@@ -25,7 +25,9 @@ class UserController extends Controller
     public function __construct() 
     {
         $this->unicode_prefix = 'IMP23';
-        session_start();
+        if (session_status() === PHP_SESSION_NONE) {
+            session_start();
+        }
         $this->now = Carbon::now();
     }
 

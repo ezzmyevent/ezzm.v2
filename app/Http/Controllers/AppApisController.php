@@ -4,7 +4,8 @@ namespace App\Http\Controllers;
 
 use File;
 use Illuminate\Http\Request;
-use DB, Storage;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Storage;
 use SimpleSoftwareIO\QrCode\Facades\QrCode;
 use App\Models\InterfaceUserRegistrations;
 use App\Models\UserInterface;
@@ -15,10 +16,11 @@ use App\Mail\OnlineRegisterEmail;
 
 class AppApisController extends Controller
 {
+    protected $now;
+    
     public function __construct()
     {
         $this->now = Carbon::now();
-
     }
 
     public function login($username)
@@ -247,7 +249,15 @@ class AppApisController extends Controller
     public function update(Request $request)
     {
         $id = $request->route('id');
-        $userData =  DB::table('users')->where('id', $id)->first();
+        
+        // Validate that ID is provided and is numeric
+        if (!$id || !is_numeric($id)) {
+            $response = ['status' => false, 'message' => 'Invalid user ID provided'];
+            echo json_encode($response);
+            die;
+        }
+        
+        $userData = DB::table('users')->where('id', $id)->first();
         if(!empty($userData))
         {
             
@@ -276,7 +286,12 @@ class AppApisController extends Controller
             ];
 
             $result = $redeem->create($data);
-            $userAttendee = DB::table('users')->where('id',$userData->id)->where('unique_code',$userData->unique_code)->get();
+            $userAttendee = DB::table('users')
+                ->select('id', 'name', 'adult_1', 'adult_2', 'spouse', 'kid_1', 'kid_2', 
+                         'is_adult_1', 'is_adult_2', 'is_spouse', 'is_kid_1', 'is_kid_2')
+                ->where('id',$userData->id)
+                ->where('unique_code',$userData->unique_code)
+                ->get();
             $totalUserCount = 0;
             if(!$userAttendee->isEmpty()){
                 foreach ($userAttendee as $key => $value) {
@@ -308,80 +323,80 @@ class AppApisController extends Controller
                     
                     // if($valueRem->is_adult_1 != 0){
                     //    $remainCount += 1;
-                       if($valueRem->adult_1=="No")
-                       {
-                         $remainData[$key]['is_adult_1'] = '';
-                       }
-                       else{
-                         if($value->is_adult_1!=1)
-                         {
-                            $remainCount += 1;
-                         }
-                          $remainData[$key]['is_adult_1'] = $value->is_adult_1;
-                       }
+                                               if($valueRem->adult_1=="No")
+                        {
+                          $remainData[$key]['is_adult_1'] = '';
+                        }
+                        else{
+                          if($valueRem->is_adult_1!=1)
+                          {
+                             $remainCount += 1;
+                          }
+                           $remainData[$key]['is_adult_1'] = $valueRem->is_adult_1;
+                        }
                       
                     // }
 
                     // if($valueRem->is_adult_2 != 0){
                     //    $remainCount += 1;
-                       if($valueRem->adult_2=="No")
-                       {
-                         $remainData[$key]['is_adult_2'] = '';
-                       }
-                       else{
-                         if($value->is_adult_2!=1)
-                         {
-                            $remainCount += 1;
-                         }
-                         $remainData[$key]['is_adult_2'] = $value->is_adult_2;
-                       }
+                                               if($valueRem->adult_2=="No")
+                        {
+                          $remainData[$key]['is_adult_2'] = '';
+                        }
+                        else{
+                          if($valueRem->is_adult_2!=1)
+                          {
+                             $remainCount += 1;
+                          }
+                          $remainData[$key]['is_adult_2'] = $valueRem->is_adult_2;
+                        }
                     // }
 
                     // if($valueRem->is_spouse != 0){
                     //    $remainCount += 1;
-                       if($valueRem->spouse=="No")
-                       {
-                        $remainData[$key]['is_spouse'] = '';
-                       }
-                       else{
-                        // 
-                        if($value->is_spouse!=1)
+                                               if($valueRem->spouse=="No")
                         {
-                            $remainCount += 1;
+                         $remainData[$key]['is_spouse'] = '';
                         }
-                        $remainData[$key]['is_spouse'] = $value->is_spouse;
-                       }
+                        else{
+                         // 
+                         if($valueRem->is_spouse!=1)
+                         {
+                             $remainCount += 1;
+                         }
+                         $remainData[$key]['is_spouse'] = $valueRem->is_spouse;
+                        }
                     // }
 
                     // if($valueRem->is_kid_1 != 0){
                     //    $remainCount += 1;
-                       if($valueRem->kid_1=="No")
-                       {
-                         $remainData[$key]['is_kid_1'] = '';
-                       }
-                       else{
-                        if($value->is_kid_1!=1)
+                                               if($valueRem->kid_1=="No")
                         {
-                            $remainCount += 1;
+                          $remainData[$key]['is_kid_1'] = '';
                         }
-                         $remainData[$key]['is_kid_1'] = $value->is_kid_1;
-                       }
+                        else{
+                         if($valueRem->is_kid_1!=1)
+                         {
+                             $remainCount += 1;
+                         }
+                          $remainData[$key]['is_kid_1'] = $valueRem->is_kid_1;
+                        }
                       
                     // }
 
                     // if($valueRem->is_kid_2 != 0){
                     // 
-                       if($valueRem->kid_2=="No")
-                       {
-                         $remainData[$key]['is_kid_2'] = '';
-                       }
-                       else{
-                        if($value->is_kid_2!=1)
+                                               if($valueRem->kid_2=="No")
                         {
-                            $remainCount += 1;   
+                          $remainData[$key]['is_kid_2'] = '';
                         }
-                         $remainData[$key]['is_kid_2'] = $value->is_kid_2;
-                       }
+                        else{
+                         if($valueRem->is_kid_2!=1)
+                         {
+                             $remainCount += 1;   
+                         }
+                          $remainData[$key]['is_kid_2'] = $valueRem->is_kid_2;
+                        }
                        
                     // }
                     

@@ -33,6 +33,11 @@ return [
 
     'stores' => [
 
+        'file' => [
+            'driver' => 'file',
+            'path' => storage_path('framework/cache/data'),
+        ],
+
         'none' => [
             'driver' => 'null',
         ],
